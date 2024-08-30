@@ -1,8 +1,8 @@
-#include "windows.h"
 #include <stdio.h>
+#include "windows.h"
 
-#include "lwow/lwow.h"
 #include "lwow/devices/lwow_device_ds18x20.h"
+#include "lwow/lwow.h"
 #include "scan_devices.h"
 
 /* Create new 1-Wire instance */
@@ -21,7 +21,9 @@ main(void) {
     /* Initialize 1-Wire library and set user argument to 1 */
     if (lwow_init(&ow, &lwow_ll_drv_win32, NULL) != lwowOK) {
         printf("Could not initialize LwOW..\r\n");
-        while (1) { Sleep(1000); }
+        while (1) {
+            Sleep(1000);
+        }
     }
 
     /* Get onewire devices connected on 1-wire port */
@@ -67,8 +69,8 @@ main(void) {
                         float temp;
                         uint8_t resolution = lwow_ds18x20_get_resolution_raw(&ow, &rom_ids[i]);
                         if (lwow_ds18x20_read_raw(&ow, &rom_ids[i], &temp)) {
-                            printf("Sensor %3u temperature is %d.%03d degrees (%u bits resolution)\r\n",
-                                (unsigned)i, (int)temp, (int)((temp * 1000.0f) - (((int)temp) * 1000)), (unsigned)resolution);
+                            printf("Sensor %3u temperature is %d.%03d degrees (%u bits resolution)\r\n", (unsigned)i,
+                                   (int)temp, (int)((temp * 1000.0f) - (((int)temp) * 1000)), (unsigned)resolution);
                         }
                     }
                 }
@@ -85,4 +87,3 @@ main(void) {
     printf("Terminating application thread\r\n");
     return 0;
 }
-
