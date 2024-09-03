@@ -40,16 +40,16 @@ set(lwow_include_DIRS
 )
 
 # Register core library to the system
-add_library(lwow INTERFACE)
-target_sources(lwow PUBLIC ${lwow_core_SRCS})
-target_include_directories(lwow INTERFACE ${lwow_include_DIRS})
+add_library(lwow)
+target_sources(lwow PRIVATE ${lwow_core_SRCS})
+target_include_directories(lwow PUBLIC ${lwow_include_DIRS})
 target_compile_options(lwow PRIVATE ${LWOW_COMPILE_OPTIONS})
 target_compile_definitions(lwow PRIVATE ${LWOW_COMPILE_DEFINITIONS})
 
 # Register API to the system
-add_library(lwow_devices INTERFACE)
-target_sources(lwow_devices PUBLIC ${lwow_devices_SRCS})
-target_include_directories(lwow_devices INTERFACE ${lwow_include_DIRS})
+add_library(lwow_devices)
+target_sources(lwow_devices PRIVATE ${lwow_devices_SRCS})
+target_include_directories(lwow_devices PUBLIC ${lwow_include_DIRS})
 target_compile_options(lwow_devices PRIVATE ${LWOW_COMPILE_OPTIONS})
 target_compile_definitions(lwow_devices PRIVATE ${LWOW_COMPILE_DEFINITIONS})
 
