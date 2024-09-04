@@ -1,4 +1,4 @@
-# 
+#
 # LIB_PREFIX: LWOW
 #
 # This file provides set of variables for end user
@@ -52,6 +52,7 @@ target_sources(lwow_devices PRIVATE ${lwow_devices_SRCS})
 target_include_directories(lwow_devices PUBLIC ${lwow_include_DIRS})
 target_compile_options(lwow_devices PRIVATE ${LWOW_COMPILE_OPTIONS})
 target_compile_definitions(lwow_devices PRIVATE ${LWOW_COMPILE_DEFINITIONS})
+target_link_libraries(lwow_devices PUBLIC lwow)
 
 # Create config file if user didn't provide one info himself
 if(NOT LWOW_OPTS_FILE)
@@ -60,5 +61,5 @@ if(NOT LWOW_OPTS_FILE)
 else()
     message(STATUS "Using custom lwow_opts.h file from ${LWOW_OPTS_FILE}")
 endif()
-configure_file(${LWOW_OPTS_FILE} ${LWOW_CUSTOM_INC_DIR}/lwow_opts.h COPYONLY)
 
+configure_file(${LWOW_OPTS_FILE} ${LWOW_CUSTOM_INC_DIR}/lwow_opts.h COPYONLY)
