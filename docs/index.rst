@@ -17,7 +17,7 @@ Its primary focus is UART hardware for physical communication for sensors and ot
 Features
 ^^^^^^^^
 
-* Written in C (C11), compatible with `stdint.h` for size data types
+* Written in C (C11), compatible with ``stdint.h`` data types
 * Platform independent, uses custom low-level layer for device drivers
 * 1-Wire protocol fits UART specifications at ``9600`` and ``115200`` bauds
 * Allows standard one-wire single-gpio manual control (when UARTs are no more available by the system)
