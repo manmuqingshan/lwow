@@ -4,7 +4,7 @@
  */
 
 /*
- * Copyright (c) 2024 Tilen MAJERLE
+ * Copyright (c) 2026 Tilen MAJERLE
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -63,14 +63,14 @@ static uint32_t baudrate; /* Expected baudrate set by the application */
 
 /**
  * \brief           Actual data exchange function
- * 
+ *
  * This is the demo for STM32L4xx; with slight modifications it will work on any other architecture.
- * 
+ *
  * Requirements to be provided for application
  * - microseconds timing function (example below uses 16-bit timer as source)
  * - interrupt locking mechanism
  * - GPIO manupulation features (open-drain mode, pull, etc)
- * 
+ *
  * \param           low_init_pulse_time: Time in microseconds for initial low pulse width
  * \param           pre_sample_time: Time in us to wait after pin release.
  *                      Bus is samples after time expiration
@@ -152,10 +152,10 @@ prv_transmit_receive(const uint8_t* tx, uint8_t* rx, size_t len, void* arg) {
     const uint8_t* t = tx;
     uint8_t* r = rx;
 
-    /* 
+    /*
      * For baudrate set at 9600 - by UART definition
      * this fits timing only for reset sequence at onewire level
-     * 
+     *
      * Length must always be 1, or error is returned
      */
     if (baudrate == 9600) {
@@ -177,7 +177,7 @@ prv_transmit_receive(const uint8_t* tx, uint8_t* rx, size_t len, void* arg) {
 
             /*
              * Set value as 0xFF in case of positive reading, 0x00 otherwise.
-             * This is to be compliant with LwOW UART expectations 
+             * This is to be compliant with LwOW UART expectations
              */
             *r = v ? 0xFF : 0x00;
         }

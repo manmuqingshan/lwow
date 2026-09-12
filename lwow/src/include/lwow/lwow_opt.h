@@ -4,7 +4,7 @@
  */
 
 /*
- * Copyright (c) 2024 Tilen MAJERLE
+ * Copyright (c) 2026 Tilen MAJERLE
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -74,7 +74,7 @@ extern "C" {
 
 /**
  * \brief           Memory set function
- * 
+ *
  * \note            Function footprint is the same as \ref memset
  */
 #ifndef LWOW_MEMSET
@@ -83,7 +83,7 @@ extern "C" {
 
 /**
  * \brief           Memory copy function
- * 
+ *
  * \note            Function footprint is the same as \ref memcpy
  */
 #ifndef LWOW_MEMCPY

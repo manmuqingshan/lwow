@@ -4,7 +4,7 @@
  */
 
 /*
- * Copyright (c) 2024 Tilen MAJERLE
+ * Copyright (c) 2026 Tilen MAJERLE
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -31,9 +31,9 @@
  * Author:          Tilen MAJERLE <tilen@majerle.eu>
  * Version:         v4.0.0
  */
-#include "system/lwow_sys.h"
 #include <pthread.h>
 #include <stdlib.h>
+#include "system/lwow_sys.h"
 
 #if LWOW_CFG_OS && !__DOXYGEN__
 

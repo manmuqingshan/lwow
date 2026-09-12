@@ -4,7 +4,7 @@
  */
 
 /*
- * Copyright (c) 2024 Tilen MAJERLE
+ * Copyright (c) 2026 Tilen MAJERLE
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -234,8 +234,8 @@ lwowr_t lwow_search_with_command(lwow_t* const owobj, const uint8_t cmd, lwow_ro
 
 lwowr_t lwow_search_with_command_callback(lwow_t* const owobj, const uint8_t cmd, size_t* const roms_found,
                                           const lwow_search_cb_fn func, void* const arg);
-lwowr_t lwow_search_with_callback(lwow_t* const owobj, size_t* const roms_found, const lwow_search_cb_fn func,
-                                  void* const arg);
+lwowr_t
+lwow_search_with_callback(lwow_t* const owobj, size_t* const roms_found, const lwow_search_cb_fn func, void* const arg);
 
 lwowr_t lwow_search_devices_with_command_raw(lwow_t* const owobj, const uint8_t cmd, lwow_rom_t* const rom_id_arr,
                                              const size_t rom_len, size_t* const roms_found);
@@ -244,8 +244,8 @@ lwowr_t lwow_search_devices_with_command(lwow_t* const owobj, const uint8_t cmd,
 
 lwowr_t lwow_search_devices_raw(lwow_t* const owobj, lwow_rom_t* const rom_id_arr, const size_t rom_len,
                                 size_t* const roms_found);
-lwowr_t lwow_search_devices(lwow_t* const owobj, lwow_rom_t* const rom_id_arr, const size_t rom_len,
-                            size_t* const roms_found);
+lwowr_t
+lwow_search_devices(lwow_t* const owobj, lwow_rom_t* const rom_id_arr, const size_t rom_len, size_t* const roms_found);
 
 lwowr_t lwow_match_rom_raw(lwow_t* const owobj, const lwow_rom_t* const rom_id);
 lwowr_t lwow_match_rom(lwow_t* const owobj, const lwow_rom_t* const rom_id);

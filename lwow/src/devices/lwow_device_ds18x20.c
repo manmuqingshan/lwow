@@ -4,7 +4,7 @@
  */
 
 /*
- * Copyright (c) 2024 Tilen MAJERLE
+ * Copyright (c) 2026 Tilen MAJERLE
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -54,8 +54,8 @@ lwow_ds18x20_start_raw(lwow_t* const owobj, const lwow_rom_t* const rom_id) {
     LWOW_ASSERT0("owobj != NULL", owobj != NULL);
 
     if (lwow_reset_raw(owobj) == lwowOK && lwow_match_or_skip_rom_raw(owobj, rom_id) == lwowOK
-        && lwow_write_byte_ex_raw(owobj, LWOW_DS18X20_CMD_CONVERT_T, NULL)
-               == lwowOK) { /* Start temperature conversion */
+        && lwow_write_byte_ex_raw(owobj, LWOW_DS18X20_CMD_CONVERT_T, NULL) == lwowOK) { /* Start temperature conversion
+                                                                                         */
         res = 1;
     }
     return res;
@@ -388,7 +388,7 @@ lwow_ds18x20_set_alarm_temp(lwow_t* const owobj, const lwow_rom_t* const rom_id,
 
 /**
  * \brief           Get the low and high temperature triggers for the alarm configuration
- * 
+ *
  * \param[in]       ow: 1-Wire handle
  * \param[in]       rom_id: 1-Wire device address
  * \param[out]      temp_l: Pointer to output variable to write low temperature alarm trigger
@@ -505,7 +505,7 @@ lwow_ds18x20_is_s(lwow_t* const owobj, const lwow_rom_t* const rom_id) {
 
 /**
  * \brief           Get temperature conversion time in units of milliseconds for a specific resolution
- * 
+ *
  * \param           resolution: Resolution in bits
  * \param[in]       is_b: Set to `1` for DS18B20, `0` otherwise
  * \return          Time in ms sensor needs to convert temperature after start of convert operation
