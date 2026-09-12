@@ -12,7 +12,7 @@ https://www.maximintegrated.com/en/app-notes/index.mvp/id/214
 
 ## Features
 
-* Written in C (C11)
+* Written in C (C11), compatible with `stdint.h` for size data types
 * Platform independent, uses custom low-level layer for device drivers
 * 1-Wire protocol fits UART specifications at ``9600`` and ``115200`` bauds
 * Allows standard one-wire single-gpio manual control (when UARTs are no more available by the system)
@@ -30,8 +30,8 @@ https://www.maximintegrated.com/en/app-notes/index.mvp/id/214
 Fresh contributions are always welcome. Simple instructions to proceed:
 
 1. Fork Github repository
-2. Follow [C style & coding rules](https://github.com/MaJerle/c-code-style) already used in the project
-3. Create a pull request to develop branch with new features or bug fixes
+2. Follow [C style & coding rules](https://github.com/MaJerle/c-code-style) and use `clang-format` to format the code
+3. Create a pull request to `develop` branch with new features or bug fixes
 
 Alternatively you may:
 
