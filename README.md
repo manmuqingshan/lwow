@@ -8,7 +8,7 @@ More about 1-Wire over UART can be found on link below.
 
 https://www.maximintegrated.com/en/app-notes/index.mvp/id/214
 
-<h3>Read first: <a href="http://docs.majerle.eu/projects/lwow/">Documentation</a></h3>
+[Open documentation](https://docs.majerle.eu/projects/lwow/)
 
 ## Features
 
